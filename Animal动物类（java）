@@ -1,0 +1,88 @@
+public abstract class Animal {
+    private String name;
+    private int age;
+    //性别
+    private char sex;
+    public Animal(String name,int age,char sex){
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public char getSex() {
+        return sex;
+    }
+    public void setSex(char sex) {
+        this.sex = sex;
+    }
+    //抽象方法动物的叫声
+    public abstract void shout();
+}
+
+
+
+public class Sheep extends Animal{
+    public Sheep(String name,int age,char sex){
+        super(name,age,sex);
+    }
+    public void shout(){
+        System.out.println("动物的叫声：咩咩咩...");
+    }
+}
+
+
+
+
+public class Wolf extends Animal{
+    public Wolf(String name,int age,char sex){
+        super(name,age,sex);
+    }
+    public void shout(){
+        System.out.println("动物的叫声：嗷嗷嗷...");
+    }
+}
+
+
+
+public class TestAnimal {
+    public static void main(String[] args){
+        Sheep xiyangyang = new Sheep("喜羊羊",12,'男');
+        System.out.println("动物的名字："+xiyangyang.getName());
+        System.out.println("动物的年龄："+xiyangyang.getAge());
+        System.out.println("动物的性别："+xiyangyang.getName());
+        xiyangyang.shout();
+        Wolf hongtailang=new Wolf("红太狼",15,'女');
+        System.out.println("动物的名字："+hongtailang.getName());
+        System.out.println("动物的年龄："+hongtailang.getAge());
+        System.out.println("动物的性别："+hongtailang.getSex());
+        hongtailang.shout();
+        Dog xiaotianquan=new Dog("哮天犬",300,'男');
+        System.out.println("动物的名字："+xiaotianquan.getName());
+        System.out.println("动物的年龄："+xiaotianquan.getAge());
+        System.out.println("动物的性别："+xiaotianquan.getSex());
+        xiaotianquan.shout();
+
+    }
+}
+
+
+
+public class Dog extends Animal{
+    public Dog(String name,int age,char sex){
+        super(name,age,sex);
+    }
+    public void shout(){
+        System.out.println("动物的叫声：汪汪汪...");
+    }
+}
