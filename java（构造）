@@ -1,0 +1,62 @@
+public class person {
+    private String name;
+    private int age;
+    private double weight;
+    public person(String name,int age,double weight){
+        this.name = name ; this.age = age ; this.weight = weight;
+    }
+    public person(){
+
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+    public double getWeight(){
+        return weight;
+    }
+    public void setWeight(double weight){
+        this.weight = weight;
+    }
+    public void clothes(String c){
+        System.out.println(this.name + "穿的衣服：" + c);
+    }
+    public void food(String f){
+        System.out.println(this.name + "吃的食物：" + f);
+    }
+    public void live(String l){
+        System.out.println(this.name + "住的地方：" + l);
+    }
+    public void drive(String d){
+        System.out.println(this.name + "出行的工具：" + d);
+    }
+    public void speak(String s){
+        System.out.println(this.name + "说：" + s);
+    }
+}
+
+
+public class setup01 {
+    public static void main(String[] args){
+        person stu = new person();
+        stu.setName("潘");
+        stu.setAge(19);
+        stu.setWeight(100);
+        System.out.println(stu.getName());
+        System.out.println(stu.getAge());
+        System.out.println(stu.getWeight());
+        stu.speak("我要打瓦！我要冲白银！");
+        stu.clothes("短袖");
+        stu.food("火锅！鱼丸！");
+        stu.live("小区");
+        stu.drive("步行");
+    }
+}
